@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Tutorials - eBook Chronicle</title>
+    <meta name="description" content="Browse our complete collection of educational videos and tutorials. Learn at your own pace with high-quality content.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html"><span>eBook</span> Chronicle</a>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#courses">Courses</a></li>
+                        <li><a href="videos.html" class="active">Videos</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Register</a>
+                    <button class="cart-button" id="cartButton">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="mobile-menu-button" id="mobileMenuButton">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-button" id="closeMenuButton">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="videos.html" class="active">Videos</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCartButton">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart fa-3x"></i>
+                <p>Your cart is empty</p>
+                <a href="#courses" class="btn btn-primary">Browse Courses</a>
+            </div>
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">৳0.00</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary checkout-btn">Checkout</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="videos-page">
+            <div class="container">
+                <div class="videos-page-header">
+                    <div>
+                        <h1>Video Tutorials</h1>
+                        <p>Browse our complete collection of educational videos and tutorials. Learn at your own pace with our comprehensive content.</p>
+                    </div>
+                    <a href="https://youtube.com/@ebook_chronicle?si=I9T9G6M9Ou4SJ2BE" class="youtube-subscribe" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                        Subscribe to our Channel
+                    </a>
+                </div>
+                
+                <div class="videos-grid" id="videosGrid">
+                    <!-- Videos will be loaded dynamically -->
+                    <div class="video-card skeleton-loading"></div>
+                    <div class="video-card skeleton-loading"></div>
+                    <div class="video-card skeleton-loading"></div>
+                    <div class="video-card skeleton-loading"></div>
+                    <div class="video-card skeleton-loading"></div>
+                    <div class="video-card skeleton-loading"></div>
+                </div>
+                
+                <div class="load-more">
+                    <button class="btn btn-outline" id="loadMoreBtn">Load More Videos</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h3 class="footer-logo">eBook Chronicle</h3>
+                    <p>Quality education accessible to everyone, anywhere, anytime.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@ebook_chronicle?si=I9T9G6M9Ou4SJ2BE" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#courses">Courses</a></li>
+                        <li><a href="videos.html">Videos</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Education Street, Dhaka, Bangladesh</li>
+                        <li><i class="fas fa-envelope"></i> info@ebookchronicle.com</li>
+                        <li><i class="fas fa-phone-alt"></i> +880 1234 567890</li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/8801745872364" target="_blank">+8801745872364</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 eBook Chronicle. All rights reserved.</p>
+                <div class="payment-methods">
+                    <span>Payment methods:</span>
+                    <img src="assets/bkash-logo-small.png" alt="bKash">
+                    <img src="assets/visa-logo.png" alt="Visa">
+                    <img src="assets/mastercard-logo.png" alt="Mastercard">
+                    <img src="assets/nagad-logo-small.png" alt="Nagad">
+                    <img src="assets/rocket-logo-small.png" alt="Rocket">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Fixed Button -->
+    <a href="https://wa.me/8801745872364" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Videos page specific script
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            let videoCount = 6;
+            
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function() {
+                    videoCount += 6;
+                    fetchMoreVideos(videoCount);
+                });
+            }
+            
+            function fetchMoreVideos(count) {
+                // In a real implementation, this would fetch more videos from the API
+                // For now, just toggle the button visibility as a placeholder
+                if (count >= 12) {
+                    loadMoreBtn.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
