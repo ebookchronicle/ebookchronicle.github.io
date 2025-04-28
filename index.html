@@ -1,441 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eBook Chronicle - Online Learning Platform</title>
-    <meta name="description" content="Learn at your own pace with our premium online courses. High-quality tutorials with BKash payment option.">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Main CSS file -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boighor - Online Book Store</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500&family=Montserrat:wght@400;500;600&display=swap">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="logo">
-                    <a href="index.html"><span>eBook</span> Chronicle</a>
-                </div>
-                <nav class="nav-menu">
-                    <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="#courses">Courses</a></li>
-                        <li><a href="videos.html">Videos</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="header-buttons">
-                    <a href="login.html" class="btn btn-outline">Login</a>
-                    <a href="register.html" class="btn btn-primary">Register</a>
-                    <button class="cart-button" id="cartButton">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count" id="cartCount">0</span>
-                    </button>
-                    <button class="mobile-menu-button" id="mobileMenuButton">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1>Boighor</h1>
         </div>
-    </header>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <button class="close-button" id="closeMenuButton">
-            <i class="fas fa-times"></i>
-        </button>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="videos.html">Videos</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
-            </ul>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#bestsellers">Bestsellers</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </nav>
+        <div class="header-actions">
+          <button id="cartBtn" class="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartCount" class="cart-count">0</span>
+          </button>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <!-- Cart Drawer -->
-    <div class="cart-drawer" id="cartDrawer">
-        <div class="cart-header">
-            <h3>Your Cart</h3>
-            <button class="close-cart" id="closeCartButton">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="cart-content" id="cartContent">
-            <div class="empty-cart">
-                <i class="fas fa-shopping-cart fa-3x"></i>
-                <p>Your cart is empty</p>
-                <a href="#courses" class="btn btn-primary">Browse Courses</a>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Discover Your Next Favorite Book</h1>
+            <p>Explore our collection of bestsellers, new releases, and timeless classics.</p>
+            <div class="hero-buttons">
+              <button id="shopNowBtn" class="btn btn-primary">Shop Now</button>
+              <button id="bestsellersBtn" class="btn btn-outline">Bestsellers</button>
             </div>
-            <!-- Cart items will be added here dynamically -->
+          </div>
+          <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Book collection">
+          </div>
         </div>
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total</span>
-                <span id="cartTotal">৳0.00</span>
+      </div>
+      <div class="hero-gradient"></div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="category-section">
+      <div class="container">
+        <h2 class="section-title">Browse by Category</h2>
+        <p class="section-subtitle">Find your favorite genre</p>
+        
+        <div class="category-grid">
+          <div class="category-card primary">
+            <div class="category-icon">
+              <i class="fas fa-book"></i>
             </div>
-            <a href="checkout.html" class="btn btn-primary checkout-btn">Checkout</a>
+            <div class="category-info">
+              <h3>Fiction</h3>
+              <p>120+ books</p>
+            </div>
+          </div>
+          <div class="category-card secondary">
+            <div class="category-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <div class="category-info">
+              <h3>Non-Fiction</h3>
+              <p>95+ books</p>
+            </div>
+          </div>
+          <div class="category-card accent">
+            <div class="category-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="category-info">
+              <h3>Romance</h3>
+              <p>75+ books</p>
+            </div>
+          </div>
+          <div class="category-card success">
+            <div class="category-icon">
+              <i class="fas fa-child"></i>
+            </div>
+            <div class="category-info">
+              <h3>Children</h3>
+              <p>60+ books</p>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Featured Books Section -->
+    <section id="shop" class="featured-section">
+      <div class="container">
+        <h2 class="section-title">Featured Books</h2>
+        <p class="section-subtitle">Discover our handpicked collection</p>
+        
+        <div id="featuredBooks" class="book-grid">
+          <!-- Featured books will be loaded here by JavaScript -->
+          <div class="book-card-skeleton"></div>
+          <div class="book-card-skeleton"></div>
+          <div class="book-card-skeleton"></div>
+          <div class="book-card-skeleton"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bestseller Books Section -->
+    <section id="bestsellers" class="bestseller-section">
+      <div class="container">
+        <h2 class="section-title">Bestsellers</h2>
+        <p class="section-subtitle">Our most popular titles</p>
+        
+        <div id="bestsellerBooks" class="book-grid">
+          <!-- Bestseller books will be loaded here by JavaScript -->
+          <div class="book-card-skeleton"></div>
+          <div class="book-card-skeleton"></div>
+          <div class="book-card-skeleton"></div>
+          <div class="book-card-skeleton"></div>
+        </div>
+        
+        <div class="text-center">
+          <button id="viewAllBtn" class="btn-link">
+            View all bestsellers
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Features -->
+    <section class="features-section">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon primary">
+              <i class="fas fa-truck"></i>
+            </div>
+            <h3>Free Delivery</h3>
+            <p>On orders above ৳1000</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon secondary">
+              <i class="fas fa-undo"></i>
+            </div>
+            <h3>Easy Returns</h3>
+            <p>7-day return policy</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon accent">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Secure Payment</h3>
+            <p>Multiple payment options</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonial-section">
+      <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-subtitle">Read reviews from book lovers like you</p>
+        
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-content">"The delivery was prompt and the book was in perfect condition. I'm very satisfied with my purchase and will definitely be ordering again."</p>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Sarah Khan profile">
+              </div>
+              <div class="author-info">
+                <h4>Sarah Khan</h4>
+                <p>Dhaka</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-content">"I love the wide selection of books available. The pricing is also very reasonable compared to physical bookstores. Fast shipping too!"</p>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Rahim Ahmed profile">
+              </div>
+              <div class="author-info">
+                <h4>Rahim Ahmed</h4>
+                <p>Chittagong</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-content">"Great customer service! I had an issue with my order and they resolved it immediately. Will recommend to all my friends."</p>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Nusrat Jahan profile">
+              </div>
+              <div class="author-info">
+                <h4>Nusrat Jahan</h4>
+                <p>Sylhet</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Info Section -->
+    <section id="contact" class="store-info-section">
+      <div class="container">
+        <div class="store-info-grid">
+          <div class="store-location">
+            <h2>Visit Our Bookstore</h2>
+            <p>Experience our collection in person at our physical store</p>
+            
+            <div class="store-image">
+              <img src="https://images.unsplash.com/photo-1521056787327-865eb574a6a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bookstore interior">
+            </div>
+            
+            <div class="contact-grid">
+              <div class="contact-info">
+                <h3>Contact Information</h3>
+                <ul>
+                  <li>
+                    <i class="fas fa-phone"></i>
+                    <span>+8801745872364</span>
+                  </li>
+                  <li>
+                    <i class="fab fa-whatsapp"></i>
+                    <span>+8801745872364</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-envelope"></i>
+                    <span>contact@boighor.com</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 Book Street, Dhaka</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="opening-hours">
+                <h3>Opening Hours</h3>
+                <ul>
+                  <li>
+                    <span>Monday - Friday</span>
+                    <span>9:00 AM - 8:00 PM</span>
+                  </li>
+                  <li>
+                    <span>Saturday</span>
+                    <span>10:00 AM - 7:00 PM</span>
+                  </li>
+                  <li>
+                    <span>Sunday</span>
+                    <span>12:00 PM - 6:00 PM</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="payment-options">
+            <h2>Payment Options</h2>
+            <p>Multiple secure payment methods available</p>
+            
+            <div class="payment-card">
+              <h3>BKash Payment</h3>
+              <div class="bkash-info">
+                <div class="bkash-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div>
+                  <p>Send payment to:</p>
+                  <p class="bkash-number">01910327701</p>
+                </div>
+              </div>
+              <div class="payment-steps">
+                <ol>
+                  <li>Dial *247#</li>
+                  <li>Select "Send Money"</li>
+                  <li>Enter number: 01910327701</li>
+                  <li>Enter amount</li>
+                  <li>Enter reference: Your Order Number</li>
+                  <li>Enter PIN to confirm</li>
+                </ol>
+              </div>
+            </div>
+            
+            <div class="payment-card">
+              <h3>Other Payment Methods</h3>
+              <div class="payment-methods-grid">
+                <div class="payment-method">
+                  <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div class="payment-method">
+                  <i class="fab fa-cc-visa"></i>
+                </div>
+                <div class="payment-method">
+                  <i class="fab fa-cc-mastercard"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>Boighor</h3>
+          <p>Your trusted online bookstore with a wide selection of books in various categories. We offer fast delivery and excellent customer service.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#bestsellers">Bestsellers</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-categories">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#">Fiction</a></li>
+            <li><a href="#">Non-Fiction</a></li>
+            <li><a href="#">Romance</a></li>
+            <li><a href="#">Children</a></li>
+            <li><a href="#">Science Fiction</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> +8801745872364</li>
+            <li><i class="fab fa-whatsapp"></i> +8801745872364</li>
+            <li><i class="fas fa-envelope"></i> contact@boighor.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Book Street, Dhaka</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Boighor Book Store. All rights reserved.</p>
+      </div>
     </div>
+  </footer>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Unlock Your Potential with Quality Online Education</h1>
-                    <p>Learn at your own pace with our carefully crafted courses designed to help you master new skills and advance your career.</p>
-                    <div class="hero-buttons">
-                        <a href="#courses" class="btn btn-primary">Browse Courses</a>
-                        <a href="#demo" class="btn btn-outline">Watch Demo</a>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <h3>15+</h3>
-                            <p>Courses</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>5,000+</h3>
-                            <p>Students</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>4.8</h3>
-                            <p>Rating</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="assets/hero-image.jpg" alt="Student learning online">
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features-section" id="features">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Why Choose Us</h2>
-                    <p>We are committed to providing the best learning experience for our students</p>
-                </div>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <h3>High-Quality Content</h3>
-                        <p>Professionally recorded videos with clear explanations and practical examples.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3>Hands-on Projects</h3>
-                        <p>Apply what you learn with real-world projects that build your portfolio.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3>Certificates</h3>
-                        <p>Earn certificates upon completion to showcase your new skills.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h3>Expert Support</h3>
-                        <p>Get quick answers to your questions from our experienced instructors.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3>Mobile Learning</h3>
-                        <p>Access your courses anytime, anywhere on any device.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-sync"></i>
-                        </div>
-                        <h3>Lifetime Access</h3>
-                        <p>Pay once and access your course content forever, including updates.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Courses Section -->
-        <section class="courses-section" id="courses">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Popular Courses</h2>
-                    <p>Explore our highest-rated and most popular courses</p>
-                </div>
-                <div class="courses-grid" id="coursesGrid">
-                    <!-- Course cards will be added here dynamically -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Video Section -->
-        <section class="video-section" id="demo">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Video Tutorials</h2>
-                    <p>Get a taste of our teaching style and course quality before you purchase</p>
-                </div>
-                <div class="featured-playlist">
-                    <h3>Featured Playlist</h3>
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLHiZ4m8vCp9M6HVQv7a36cp8LKzyHIePr" title="Course Preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="channel-videos">
-                    <h3>All Channel Videos</h3>
-                    <div class="videos-grid" id="videosGrid">
-                        <!-- Video cards will be added here dynamically -->
-                    </div>
-                    <div class="view-all">
-                        <a href="videos.html" class="btn btn-primary">View All Videos <i class="fas fa-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>What Our Students Say</h2>
-                    <p>Hear from our satisfied students about their learning experience</p>
-                </div>
-                <div class="testimonials-slider" id="testimonialsSlider">
-                    <!-- Testimonials will be added here dynamically -->
-                </div>
-                <div class="slider-controls">
-                    <button class="slider-button prev" id="prevButton">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="slider-button next" id="nextButton">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Start Your Learning Journey?</h2>
-                    <p>Join thousands of students who are already advancing their careers with eBook Chronicle</p>
-                    <a href="register.html" class="btn btn-primary">Get Started Today</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about-section" id="about">
-            <div class="container">
-                <div class="section-header">
-                    <h2>About eBook Chronicle</h2>
-                    <p>Our mission is to provide quality education accessible to everyone</p>
-                </div>
-                <div class="about-content">
-                    <div class="about-image">
-                        <img src="assets/about-image.jpg" alt="Our Team">
-                    </div>
-                    <div class="about-text">
-                        <h3>Our Story</h3>
-                        <p>eBook Chronicle was founded with a simple mission: to make high-quality education accessible to everyone, regardless of their background or location. We believe that knowledge should not be limited by geographical boundaries or financial constraints.</p>
-                        <p>Our team consists of passionate educators, industry experts, and technology enthusiasts who work together to create comprehensive, engaging, and practical learning experiences.</p>
-                        <p>Since our inception, we have helped thousands of students from around the world learn new skills, advance their careers, and achieve their goals. We are constantly expanding our course library and improving our teaching methods to ensure the best learning outcomes for our students.</p>
-                        <div class="about-stats">
-                            <div class="stat-item">
-                                <h3>2018</h3>
-                                <p>Founded</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3>20+</h3>
-                                <p>Instructors</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3>50,000+</h3>
-                                <p>Learning Hours</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Payment Section -->
-        <section class="payment-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Easy Payment Options</h2>
-                    <p>We offer multiple secure payment methods for your convenience</p>
-                </div>
-                <div class="payment-options">
-                    <div class="payment-option">
-                        <img src="assets/bkash-logo.png" alt="bKash">
-                        <h3>bKash</h3>
-                        <p>Send payment to our merchant number: 01910327701</p>
-                    </div>
-                    <div class="payment-option">
-                        <img src="assets/card-logo.png" alt="Credit/Debit Card">
-                        <h3>Credit/Debit Card</h3>
-                        <p>Pay securely with your Visa, Mastercard, or American Express card</p>
-                    </div>
-                    <div class="payment-option">
-                        <img src="assets/nagad-logo.png" alt="Nagad">
-                        <h3>Nagad</h3>
-                        <p>Fast and secure mobile financial service</p>
-                    </div>
-                    <div class="payment-option">
-                        <img src="assets/rocket-logo.png" alt="Rocket">
-                        <h3>Rocket</h3>
-                        <p>Mobile banking service by Dutch-Bangla Bank</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact-section" id="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Get In Touch</h2>
-                    <p>Have questions? We're here to help</p>
-                </div>
-                <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <div class="contact-card">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h3>Our Location</h3>
-                            <p>123 Education Street, Dhaka, Bangladesh</p>
-                        </div>
-                        <div class="contact-card">
-                            <i class="fas fa-envelope"></i>
-                            <h3>Email Us</h3>
-                            <p><a href="mailto:info@ebookchronicle.com">info@ebookchronicle.com</a></p>
-                        </div>
-                        <div class="contact-card">
-                            <i class="fas fa-phone-alt"></i>
-                            <h3>Call Us</h3>
-                            <p><a href="tel:+8801234567890">+880 1234 567890</a></p>
-                        </div>
-                        <div class="contact-card">
-                            <i class="fab fa-whatsapp"></i>
-                            <h3>WhatsApp</h3>
-                            <p><a href="https://wa.me/8801745872364" target="_blank">+8801745872364</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-form-wrapper">
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
-                        <div class="whatsapp-cta">
-                            <p>Need quick support? Reach us on WhatsApp</p>
-                            <a href="https://wa.me/8801745872364" class="btn btn-whatsapp" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-column">
-                    <h3 class="footer-logo">eBook Chronicle</h3>
-                    <p>Quality education accessible to everyone, anywhere, anytime.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://youtube.com/@ebook_chronicle?si=I9T9G6M9Ou4SJ2BE" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#courses">Courses</a></li>
-                        <li><a href="videos.html">Videos</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Refund Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Education Street, Dhaka, Bangladesh</li>
-                        <li><i class="fas fa-envelope"></i> info@ebookchronicle.com</li>
-                        <li><i class="fas fa-phone-alt"></i> +880 1234 567890</li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/8801745872364" target="_blank">+8801745872364</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 eBook Chronicle. All rights reserved.</p>
-                <div class="payment-methods">
-                    <span>Payment methods:</span>
-                    <img src="assets/bkash-logo-small.png" alt="bKash">
-                    <img src="assets/visa-logo.png" alt="Visa">
-                    <img src="assets/mastercard-logo.png" alt="Mastercard">
-                    <img src="assets/nagad-logo-small.png" alt="Nagad">
-                    <img src="assets/rocket-logo-small.png" alt="Rocket">
-                </div>
-            </div>
+  <!-- Shopping Cart -->
+  <div id="shoppingCart" class="shopping-cart">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h2>Your Shopping Cart</h2>
+        <button id="closeCartBtn" class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="cart-body">
+        <div id="emptyCart" class="empty-cart">
+          <i class="fas fa-shopping-cart"></i>
+          <p>Your cart is empty</p>
+          <button id="shopNowBtnEmpty" class="btn btn-primary">Shop Now</button>
         </div>
-    </footer>
+        <div id="cartItems" class="cart-items">
+          <!-- Cart items will be added here by JavaScript -->
+        </div>
+      </div>
+      
+      <div id="cartFooter" class="cart-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cartTotal">৳0</span>
+        </div>
+        
+        <div class="cart-actions">
+          <button id="continueShoppingBtn" class="btn btn-outline">Continue Shopping</button>
+          <button id="checkoutBtn" class="btn btn-success">Complete Order via WhatsApp</button>
+        </div>
+        
+        <div class="cart-info">
+          <p>
+            <i class="fas fa-info-circle"></i>
+            Your order details will be sent to our WhatsApp number for confirmation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- WhatsApp Fixed Button -->
-    <a href="https://wa.me/8801745872364" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+  <!-- Overlay -->
+  <div id="overlay" class="overlay"></div>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
